@@ -1,11 +1,9 @@
-﻿using System;
-
-namespace VehicleManagement.Model.Database;
+﻿namespace VehicleManagement.Models.Database;
 
 /// <summary>
 /// Provides the creation / modification date / time properties
 /// </summary>
-internal class CreationModifiedDateTimeBase
+public class CreationModifiedDateTimeBase
 {
     /// <summary>
     /// Gets or sets the creation date / time

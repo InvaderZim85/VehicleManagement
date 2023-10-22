@@ -1,13 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace VehicleManagement.Model.Database;
+namespace VehicleManagement.Models.Database;
 
 /// <summary>
 /// Represents a settings entry
 /// </summary>
 [Table("Settings", Schema = "dbo")]
-internal sealed class SettingsDbModel : CreationModifiedDateTimeBase
+public sealed class SettingsDbModel : CreationModifiedDateTimeBase
 {
     /// <summary>
     /// Gets or sets the id

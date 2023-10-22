@@ -1,14 +1,13 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace VehicleManagement.Model.Database;
+namespace VehicleManagement.Models.Database;
 
 /// <summary>
 /// Represents a finances entry (insurance, etc.)
 /// </summary>
 [Table("Finances", Schema = "dbo")]
-internal sealed class FinancesDbModel : CreationModifiedDateTimeBase
+public sealed class FinancesDbModel : CreationModifiedDateTimeBase
 {
     /// <summary>
     /// Gets or sets the id

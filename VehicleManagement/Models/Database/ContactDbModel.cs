@@ -1,14 +1,13 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace VehicleManagement.Model.Database;
+namespace VehicleManagement.Models.Database;
 
 /// <summary>
 /// Represents a contact
 /// </summary>
 [Table("Contact", Schema = "dbo")]
-internal sealed class ContactDbModel : CreationModifiedDateTimeBase
+public sealed class ContactDbModel : CreationModifiedDateTimeBase
 {
     /// <summary>
     /// Gets or sets the id of the entry

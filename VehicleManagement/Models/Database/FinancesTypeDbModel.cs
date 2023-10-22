@@ -1,13 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace VehicleManagement.Model.Database;
+namespace VehicleManagement.Models.Database;
 
 /// <summary>
 /// Represents a finance type
 /// </summary>
 [Table("FinancesType", Schema = "dbo")]
-internal sealed class FinancesTypeDbModel
+public sealed class FinancesTypeDbModel
 {
     /// <summary>
     /// Gets or sets the id

@@ -1,14 +1,13 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace VehicleManagement.Model.Database;
+namespace VehicleManagement.Models.Database;
 
 /// <summary>
 /// Represents a vehicle
 /// </summary>
 [Table("Vehicle", Schema = "dbo")]
-internal sealed class VehicleDbModel
+public sealed class VehicleDbModel
 {
     /// <summary>
     /// Gets or sets the id

@@ -1,13 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace VehicleManagement.Model.Database;
+namespace VehicleManagement.Models.Database;
 
 /// <summary>
-/// Represents a vehicle type
+/// Represents a schedule type
 /// </summary>
-[Table("VehicleType", Schema = "dbo")]
-internal sealed class VehicleTypeDbModel
+[Table("ScheduleType", Schema = "dbo")]
+public sealed class ScheduleTypeDbModel
 {
     /// <summary>
     /// Gets or sets the id

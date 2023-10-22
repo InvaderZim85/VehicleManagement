@@ -1,24 +1,14 @@
 ﻿using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using VehicleManagement.Model.Database;
+using VehicleManagement.Models.Database;
 
 namespace VehicleManagement.Data;
 
 /// <summary>
 /// Provides the database tables
 /// </summary>
-internal class AppDbContext : DbContext
+public class AppDbContext : DbContext
 {
-    /// <summary>
-    /// Contains the name / path of the MS SQL server
-    /// </summary>
-    private readonly string _server;
-
-    /// <summary>
-    /// Contains the name of the database
-    /// </summary>
-    private readonly string _database;
-
     /// <summary>
     /// Gets or sets the contacts
     /// </summary>
@@ -57,26 +47,5 @@ internal class AppDbContext : DbContext
     /// <summary>
     /// Creates a new instance of the <see cref="AppDbContext"/>
     /// </summary>
-    /// <param name="server">The name / path of the MS SQL server</param>
-    /// <param name="database">The name of the database</param>
-    protected AppDbContext(string server, string database)
-    {
-        _server = server;
-        _database = database;
-    }
-
-    /// <inheritdoc />
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        var conString = new SqlConnectionStringBuilder
-        {
-            DataSource = _server,
-            InitialCatalog = _database,
-            IntegratedSecurity = true,
-            TrustServerCertificate = true,
-            ApplicationName = "VehicleManagement"
-        }.ConnectionString;
-
-        optionsBuilder.UseSqlServer(conString);
-    }
+    public AppDbContext(DbContextOptions options) : base(options) { }
 }
